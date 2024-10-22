@@ -1,8 +1,16 @@
 import React from 'react'
+import Logo from '../../assets/images/logo.png'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
-    <div>Navbar</div>
+    <nav>
+      <img src={Logo} alt="Kasa" />
+      <ul>
+        <li><Link to="/">Accueil</Link></li>
+        <li><Link to="/">A Propos</Link></li>
+      </ul>
+    </nav>
   )
 }
 
