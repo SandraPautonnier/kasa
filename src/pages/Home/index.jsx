@@ -3,6 +3,7 @@ import Navbar from '../../components/Navbar'
 import housings from '../../assets/logements.json'
 import Footer from '../../components/Footer'
 
+
 const Home = () => {
   return (
     <div>
