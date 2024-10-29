@@ -1,6 +1,6 @@
 nav {
     display: flex;
-    margin: 15px;
+    margin: $15;
     img {
         width: 145px;
         height: auto;
@@ -10,6 +10,7 @@ nav {
         gap: 1rem;
         li {
             list-style: none;
+            
         }
     }
 }

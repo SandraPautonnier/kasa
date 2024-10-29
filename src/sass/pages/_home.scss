@@ -1,21 +1,16 @@
-
+@import "../components/housing-card";
 
 .header-banner {
-    height: 111px;
-    /*background-image: url("../../assets/images/background.png");*/
-    background-color: rgba($color: #000000, $alpha: 0.30); 
     border-radius: 10px;
     display: flex;
+    margin: $15;
     h1 {
         font-size: 24px;
         font-weight: 700;
         color: white;
-        margin-left: 15px;
+        margin-left: $15;
         justify-content: center;
         
     }
 }
 
-.container-housings {
-    
-}

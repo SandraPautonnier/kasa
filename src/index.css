@@ -1,51 +1,18 @@
-.header-banner {
-  height: 111px;
-  /*background-image: url("../../assets/images/background.png");*/
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  display: flex;
-}
-.header-banner h1 {
-  font-size: 24px;
-  font-weight: 700;
-  color: white;
-  margin-left: 15px;
-  justify-content: center;
-}
+/* Error: Expected identifier.
+ *   ,
+ * 6 |     margin: $15;
+ *   |              ^
+ *   '
+ *   src\sass\pages\_home.scss 6:14  @use
+ *   src\sass\style.scss 2:1         root stylesheet */
 
-nav {
-  display: flex;
-  margin: 15px;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Expected identifier.\a   \2577 \a 6 \2502      margin: $15;\d\a   \2502               ^\a   \2575 \a   src\\sass\\pages\\_home.scss 6:14  @use\a   src\\sass\\style.scss 2:1         root stylesheet";
 }
-nav img {
-  width: 145px;
-  height: auto;
-}
-nav ul {
-  display: flex;
-  gap: 1rem;
-}
-nav ul li {
-  list-style: none;
-}
-
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 210px;
-  background-color: black;
-  color: white;
-}
-footer img {
-  width: 145px;
-  height: auto;
-  fill: white;
-}
-
-* {
-  font-family: "Montserrat", sans-serif;
-}
-
-/*# sourceMappingURL=index.css.map */

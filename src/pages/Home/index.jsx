@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../../components/Navbar'
 import housings from '../../assets/logements.json'
 import Footer from '../../components/Footer'
+import Background from '../../assets/images/background.png'
 
 
 const Home = () => {
@@ -9,7 +10,7 @@ const Home = () => {
     <div>
         <header>
             <Navbar/>
-            <div className='header-banner'>
+            <div className='header-banner' style={{background: `linear-gradient(to bottom, rgba(0,0,0, 0.5), rgba(0,0,0, 0.5)), url(${Background}) no-repeat center/cover`}}>
               <h1>Chez vous,<br/> partout et ailleurs</h1>
             </div>
         </header>
@@ -17,10 +18,9 @@ const Home = () => {
           <div className='container-housings'>
           {
             housings.map(housing => (
-              <div key={housing.id}>
-                {
-                  housing.id
-                }
+              <div className='card-housing' key={housing.id}>
+                <img src={`${housing.cover}`} alt={`${housing.description}`} /> 
+                <p>{housing.title}</p>
               </div>
             ))
           }
