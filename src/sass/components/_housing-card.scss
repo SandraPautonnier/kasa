@@ -1,24 +1,39 @@
+@import "../utils/variables";
+
 .container-housings {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: $15;
-    margin: $15;
+    gap: 15px;
+    border-radius: 20px;
+    @media (min-width: 1024px) {
+        background-color: #f6f6f6;
+        gap: 30px;
+        padding: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
     .card-housing {
         position: relative;
-        
         img {
-            border-radius: $15;
-            max-width: 100%;
+            border-radius: 15px;
+            width: 100%;
             height: 225px;
+            object-fit: cover;
+            @media (min-width: 1024px) {
+                width: 100%;
+            }
         }
         p {
             position: absolute;
             color: white;
             font-size: 18px;
+            font-weight: 700;
             z-index: 10;
-            bottom: $15;
-            left: $15;
+            bottom: 0px;
+            left: 15px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+            
         }
         
     }

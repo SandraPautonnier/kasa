@@ -1,16 +1,27 @@
+@import "../utils/variables";
+
 nav {
     display: flex;
-    margin: $15;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    @media (min-width: 1024px) {
+        margin-bottom: 30px;
+    }
     img {
         width: 145px;
         height: auto;
     }
     ul {
         display: flex;
-        gap: 1rem;
-        li {
-            list-style: none;
-            
+        gap: 2rem;
+        
+        @media (max-width: 375px) {
+            text-transform: uppercase;
+            gap: 1rem;
+            font-size: 12px;
+            font-weight: 500;
         }
+        
     }
 }

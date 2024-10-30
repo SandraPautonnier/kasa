@@ -11,7 +11,7 @@ const Home = () => {
         <header>
             <Navbar/>
             <div className='header-banner' style={{background: `linear-gradient(to bottom, rgba(0,0,0, 0.5), rgba(0,0,0, 0.5)), url(${Background}) no-repeat center/cover`}}>
-              <h1>Chez vous,<br/> partout et ailleurs</h1>
+              <h1>Chez vous, partout et ailleurs</h1>
             </div>
         </header>
         <main>

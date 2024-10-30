@@ -8,3 +8,38 @@
 * {
     font-family: 'Montserrat', sans-serif;
 }
+
+body {
+    margin: 0 auto;
+    width: 100%;
+}
+
+header, main {
+    margin: 15px;
+    @media (min-width: 1024px) {
+        margin: 30px auto;
+        max-width: 1240px;
+    }
+}
+
+header {
+    
+    padding: 0;
+    @media (min-width: 1024px) {
+        padding: 0 30px;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 500;
+    
+    &:active {
+        text-decoration:underline;
+    }
+}

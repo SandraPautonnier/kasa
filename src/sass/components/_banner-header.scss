@@ -1,0 +1,25 @@
+.header-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 110px;
+    border-radius: 15px;
+    padding: 0px 100px 0px 0px;
+    @media (min-width: 1024px) {
+        height: 220px;
+        align-items: center;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        
+    }
+    h1 {
+        font-size: 24px;
+        font-weight: 700;
+        color: white;
+        margin-left: 15px;
+        justify-content: center;
+        @media (min-width: 1024px) {
+            font-size: 43px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+        }
+    }    
+}
