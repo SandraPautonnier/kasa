@@ -15,7 +15,6 @@ nav {
     ul {
         display: flex;
         gap: 2rem;
-        
         @media (max-width: 375px) {
             text-transform: uppercase;
             gap: 1rem;
