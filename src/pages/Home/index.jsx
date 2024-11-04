@@ -1,8 +1,11 @@
+import { Link } from 'react-router-dom';
+
 import React from 'react'
 import Navbar from '../../components/Navbar'
 import housings from '../../assets/logements.json'
 import Footer from '../../components/Footer'
 import Background from '../../assets/images/background.png'
+
 
 
 const Home = () => {
@@ -19,7 +22,7 @@ const Home = () => {
           {
             housings.map(housing => (
               <div className='card-housing' key={housing.id}>
-                <img src={`${housing.cover}`} alt={`${housing.description}`} /> 
+                <Link to={`/housing/${housings.id}`}> <img src={`${housing.cover}`} alt={`${housing.description}`} /></Link>
                 <p>{housing.title}</p>
               </div>
             ))
