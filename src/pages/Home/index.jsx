@@ -22,7 +22,7 @@ const Home = () => {
           {
             housings.map(housing => (
               <div className='card-housing' key={housing.id}>
-                <Link to={`/housing/${housings.id}`}> <img src={`${housing.cover}`} alt={`${housing.description}`} /></Link>
+                <Link to={`/housing/${housing.id}`}> <img src={`${housing.cover}`} alt={`${housing.description}`} /></Link>
                 <p>{housing.title}</p>
               </div>
             ))

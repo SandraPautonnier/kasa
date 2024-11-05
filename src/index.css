@@ -18,7 +18,7 @@
   position: relative;
 }
 .container-housings .card-housing img {
-  border-radius: 15px;
+  border-radius: 10px;
   width: 100%;
   height: 225px;
   object-fit: cover;
@@ -44,7 +44,7 @@
   align-items: center;
   justify-content: center;
   height: 110px;
-  border-radius: 15px;
+  border-radius: 10px;
   padding: 0px 100px 0px 0px;
 }
 @media (min-width: 1024px) {
@@ -66,6 +66,16 @@
     font-size: 43px;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
   }
+}
+
+img {
+  width: 100%;
+  height: 255px;
+  border-radius: 10px;
+}
+
+h2 {
+  color: #FF6060;
 }
 
 nav {
