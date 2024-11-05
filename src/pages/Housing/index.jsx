@@ -1,5 +1,5 @@
 import { Navigate, useParams } from 'react-router-dom';
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '../../components/Navbar';
 import housings from '../../assets/logements.json';
 import Footer from '../../components/Footer';
@@ -9,6 +9,7 @@ import Dropdown from '../../components/Dropdown';
 
 const Housing = () => {
     const {id} = useParams();
+
     const housing = housings.find(item => item.id === id);
 
     if (!id || !housing){
@@ -23,12 +24,21 @@ const Housing = () => {
             </header>
             <main>
                 <div className='housing-form' >
-                    <img src={`${housing.cover}`} alt={`${housing.description}`}/>
+                    <img className='header-img' src={`${housing.cover}`} alt={`${housing.description}`}/>
                     <h2>{`${housing.title}`}</h2>
                     <p>{`${housing.location}`}</p>
-                    <div>{`${housing.tags}`}</div>
-                    <div>{`${housing.host}`}</div>
-                    <div>{`${housing.rating}`}</div>
+                        <ul>
+                            {housings.map(housing => (
+                                <li key={housing.tags}>{tags}</li>
+                            ))
+                            }
+                            
+                        </ul>
+                    <div className='host-member'>
+                        <div>{`${housing.host.name}`}</div>
+                        <img src={`${housing.host.picture}`} alt={`${housing.host.name}`} />
+                    </div>
+                    <span>{`${housing.rating}`}</span>
                     <div>
                         <Dropdown content={housing.description} title={"Description"}/>
                         <Dropdown content={housing.equipments} title={"Equipements"}/>
