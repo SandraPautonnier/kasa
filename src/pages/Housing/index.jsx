@@ -27,18 +27,18 @@ const Housing = () => {
                     <img className='header-img' src={`${housing.cover}`} alt={`${housing.description}`}/>
                     <h2>{`${housing.title}`}</h2>
                     <p>{`${housing.location}`}</p>
-                        <ul>
-                            {housings.map(housing => (
-                                <li key={housing.tags}>{tags}</li>
-                            ))
-                            }
-                            
-                        </ul>
-                    <div className='host-member'>
-                        <div>{`${housing.host.name}`}</div>
-                        <img src={`${housing.host.picture}`} alt={`${housing.host.name}`} />
+                    <ul className='tags'>
+                        {housing.tags.map((tag, index) => (
+                            <li className='tag' key={index}>{tag}</li>
+                        ))}
+                    </ul>
+                    <div className='host-ratting'>
+                        <span>{`${housing.rating}`}</span>
+                        <div className='host-member'>
+                            <div className='member-nane'>{`${housing.host.name}`}</div>
+                            <img src={`${housing.host.picture}`} alt={`${housing.host.name}`} />
+                        </div>
                     </div>
-                    <span>{`${housing.rating}`}</span>
                     <div>
                         <Dropdown content={housing.description} title={"Description"}/>
                         <Dropdown content={housing.equipments} title={"Equipements"}/>
@@ -49,21 +49,5 @@ const Housing = () => {
         </div>
     )
 }
-
-/*const Housing = () => {
-    return (
-        <div>
-            <header>
-                <Navbar/>
-            </header>
-            <main>
-                <div className='housing-form'>
-                    
-                </div>
-            </main>
-            <Footer/>
-        </div>
-    )
-}*/
 
 export default Housing;

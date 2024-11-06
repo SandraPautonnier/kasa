@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { byPrefixAndName } from '@awesome.me/kit-KIT_CODE/icons';
 
 const Dropdown = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,11 +12,8 @@ const Dropdown = ({ title, content }) => {
       <div onClick={toggle}>
         <h3>{title}</h3>
         <button>
-          <i
-            className={`fa-solid ${
-              isOpen ? "fa-chevron-up" : "fa-chevron-down"
-            }`}
-          ></i>
+          <FontAwesomeIcon icon={`fa-solid ${
+              isOpen ? "fa-chevron-up" : "fa-chevron-down"}`} />
         </button>
       </div>
       {typeof content === "string"? (
