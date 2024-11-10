@@ -68,6 +68,16 @@
   }
 }
 
+.container-dropdown {
+  position: relative;
+}
+.container-dropdown h3 {
+  position: absolute;
+  color: white;
+  top: -15px;
+  left: 10px;
+}
+
 .header-img {
   width: 100%;
   height: 255px;
@@ -124,7 +134,7 @@ p {
   border-radius: 50%;
   object-fit: cover;
 }
-.host-ratting .host-member .member-nane {
+.host-ratting .host-member .member-name {
   color: #FF6060;
 }
 
@@ -134,10 +144,7 @@ button {
   background-color: #FF6060;
   border: none;
   border-radius: 7px;
-}
-
-i {
-  visibility: visible;
+  cursor: pointer;
 }
 
 nav {
