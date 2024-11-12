@@ -1,0 +1,15 @@
+@import "../utils/variables";
+
+.rating {
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .star {
+    font-size: 24px;
+    color: #e3e3e3; /* Couleur pour les étoiles vides */
+  }
+  
+  .star.filled {
+    color: $main-color; /* Couleur pour les étoiles remplies */
+  }

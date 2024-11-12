@@ -4,6 +4,10 @@
 @use "pages/housing";
 @use "layout/Navbar";
 @use "layout/Footer";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
 
 * {
     font-family: 'Montserrat', sans-serif;
@@ -18,12 +22,12 @@ header, main {
     margin: 15px;
     @media (min-width: 1024px) {
         margin: 30px auto;
+        padding: 0px 30px;
         max-width: 1240px;
     }
 }
 
 header {
-    
     padding: 0;
     @media (min-width: 1024px) {
         padding: 0 30px;

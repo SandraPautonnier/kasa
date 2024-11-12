@@ -14,11 +14,5 @@ footer {
         height: auto;
         filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(39deg) brightness(200%) contrast(101%);
     }
-    p {
-        width: 150px;
-        @media (min-width: 375px) {
-            width: 230px;
 
-        }
-    }
 }

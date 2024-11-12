@@ -4,6 +4,7 @@ import Navbar from '../../components/Navbar';
 import housings from '../../assets/logements.json';
 import Footer from '../../components/Footer';
 import Dropdown from '../../components/Dropdown';
+import Rating from '../../components/Rating';
 
 
 
@@ -13,7 +14,7 @@ const Housing = () => {
     const housing = housings.find(item => item.id === id);
 
     if (!id || !housing){
-        return <Navigate to="/"/>
+        return <Navigate to="/404"/>
 
     }
 
@@ -25,23 +26,27 @@ const Housing = () => {
             <main>
                 <div className='housing-form' >
                     <img className='header-img' src={`${housing.cover}`} alt={`${housing.description}`}/>
-                    <h2>{`${housing.title}`}</h2>
-                    <p>{`${housing.location}`}</p>
-                    <ul className='tags'>
-                        {housing.tags.map((tag, index) => (
-                            <li className='tag' key={index}>{tag}</li>
-                        ))}
-                    </ul>
-                    <div className='host-ratting'>
-                        <span>{`${housing.rating}`}</span>
-                        <div className='host-member'>
-                            <div className='member-nane'>{`${housing.host.name}`}</div>
-                            <img src={`${housing.host.picture}`} alt={`${housing.host.name}`} />
+                    <div className='form'>
+                        <div className='left-form'>
+                            <h2>{`${housing.title}`}</h2>
+                            <p>{`${housing.location}`}</p>
+                            <ul className='tags'>
+                                {housing.tags.map((tag, index) => (
+                                    <li className='tag' key={index}>{tag}</li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div className='host-ratting'>
+                            <Rating rating={`${housing.rating}`}></Rating>
+                            <div className='host-member'>
+                                <p className='member-name'>{`${housing.host.name}`}</p>
+                                <img src={`${housing.host.picture}`} alt={`${housing.host.name}`} />
+                            </div>
                         </div>
                     </div>
-                    <div>
+                    <div className='drop-down'>
                         <Dropdown content={housing.description} title={"Description"}/>
-                        <Dropdown content={housing.equipments} title={"Equipements"}/>
+                        <Dropdown content={housing.equipments} title={"Équipements"}/>
                     </div>
                 </div>
             </main>

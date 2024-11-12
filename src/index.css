@@ -1,3 +1,5 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 .container-housings {
   display: flex;
   flex-direction: column;
@@ -68,14 +70,100 @@
   }
 }
 
+.container-notfound {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.title-404 {
+  font-size: 100px;
+  font-weight: 700;
+  margin: 80px auto;
+}
+@media (min-width: 1024px) {
+  .title-404 {
+    font-size: 150px;
+  }
+}
+
+.p-404 {
+  color: #FF6060;
+  font-size: 17px;
+  font-weight: 500;
+  margin: 90px 50px;
+}
+@media (min-width: 1024px) {
+  .p-404 {
+    font-size: 24px;
+  }
+}
+
+a.link-home {
+  text-decoration: underline;
+}
+
+button {
+  width: 100%;
+  height: 30px;
+  background-color: #FF6060;
+  border: none;
+  border-radius: 7px;
+  padding: 0;
+  cursor: pointer;
+}
+button svg {
+  width: 32px;
+  position: absolute;
+  top: 7px;
+  right: 5px;
+  filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(338deg) brightness(100%) contrast(103%);
+}
+
 .container-dropdown {
   position: relative;
+  margin-bottom: 20px;
+}
+.container-dropdown .click-toggle {
+  padding: 0px;
+  margin: 0;
+  height: 30px;
 }
 .container-dropdown h3 {
   position: absolute;
   color: white;
-  top: -15px;
+  top: 6px;
   left: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+}
+.container-dropdown .content-dropdown {
+  background-color: #f6f6f6;
+  margin: 0;
+  font-size: 17px;
+  line-height: 25px;
+  padding: 15px;
+  border-radius: 10px;
+}
+.container-dropdown .content-dropdown .content-drop {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+}
+
+.rating {
+  display: inline-flex;
+  align-items: center;
+}
+
+.star {
+  font-size: 24px;
+  color: #e3e3e3; /* Couleur pour les étoiles vides */
+}
+
+.star.filled {
+  color: #FF6060; /* Couleur pour les étoiles remplies */
 }
 
 .header-img {
@@ -93,38 +181,50 @@
 h2 {
   color: #FF6060;
   font-weight: 500;
+  margin: 10px 0px;
 }
 
 p {
   font-weight: 500;
+  margin: 10px 0px;
 }
 
 .tags {
   display: inline-flex;
+  flex-wrap: wrap;
   align-items: center;
+  margin: 10px 0px;
   width: 100%;
-  gap: 20px;
+  gap: 10px;
   padding: 0;
 }
 .tags .tag {
   display: inline;
+  text-wrap: nowrap;
   background-color: #FF6060;
   color: white;
   font-size: 12px;
-  font-weight: 700;
-  line-height: 20px;
+  font-weight: 600;
   border-radius: 10px;
   text-align: center;
-  padding: 5px 15px;
+  padding: 5px 25px;
 }
 
 .host-ratting {
-  display: flex;
+  display: inline-flex;
   justify-content: space-between;
-  align-items: center;
+  margin-bottom: 15px;
+}
+@media (min-width: 1024px) {
+  .host-ratting {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-content: center;
+  }
 }
 .host-ratting .host-member {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 10px;
 }
@@ -134,17 +234,34 @@ p {
   border-radius: 50%;
   object-fit: cover;
 }
-.host-ratting .host-member .member-name {
+.host-ratting .host-member p.member-name {
   color: #FF6060;
+  font-size: 16px;
+  /*white-space: pre-line;*/
 }
 
-button {
-  width: 100%;
-  height: 30px;
-  background-color: #FF6060;
-  border: none;
-  border-radius: 7px;
-  cursor: pointer;
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+}
+@media (min-width: 1024px) {
+  .form {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.drop-down {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .drop-down {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
 }
 
 nav {
@@ -189,14 +306,6 @@ footer img {
   height: auto;
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(39deg) brightness(200%) contrast(101%);
 }
-footer p {
-  width: 150px;
-}
-@media (min-width: 375px) {
-  footer p {
-    width: 230px;
-  }
-}
 
 * {
   font-family: "Montserrat", sans-serif;
@@ -213,6 +322,7 @@ header, main {
 @media (min-width: 1024px) {
   header, main {
     margin: 30px auto;
+    padding: 0px 30px;
     max-width: 1240px;
   }
 }

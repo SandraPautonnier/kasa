@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+
 
 const Dropdown = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,22 +10,25 @@ const Dropdown = ({ title, content }) => {
 
   return (
     <div className="container-dropdown">
-      <div onClick={toggle}>
+      <div className="click-toggle" onClick={toggle}>
         <h3>{title}</h3>
         <button>
-          <FontAwesomeIcon icon={`fa-solid ${
-              isOpen ? "fa-chevron-up" : "fa-chevron-down"}`} />
+          <FontAwesomeIcon icon={isOpen ? faChevronUp : faChevronDown} />
         </button>
       </div>
-      {typeof content === "string"? (
-        <p>{content}</p>
-      ) : content instanceof Array ? (
-        <ul>
-          {content.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))}
-        </ul>
-      ) : null}
+      {isOpen && (
+        <div className="content-dropdown">
+          {typeof content === "string" ? (
+            <p className="content-drop">{content}</p>
+          ) : content instanceof Array ? (
+            <ul className="content-drop">
+              {content.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          ) : null}
+        </div>
+      )}
     </div>
   );
 };
