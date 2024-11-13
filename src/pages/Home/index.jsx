@@ -5,8 +5,6 @@ import housings from '../../assets/logements.json'
 import Footer from '../../components/Footer'
 import Background from '../../assets/images/background.png'
 
-
-
 const Home = () => {
   return (
     <div>
