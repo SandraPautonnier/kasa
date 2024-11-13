@@ -8,7 +8,7 @@ const Navbar = () => {
       <img src={Logo} alt="Kasa" />
       <ul>
         <li><Link to="/">Accueil</Link></li>
-        <li><Link to="/">A Propos</Link></li>
+        <li><Link to="/about">A Propos</Link></li>
       </ul>
     </nav>
   )

@@ -7,7 +7,6 @@ import Dropdown from '../../components/Dropdown';
 import Rating from '../../components/Rating';
 
 
-
 const Housing = () => {
     const {id} = useParams();
 

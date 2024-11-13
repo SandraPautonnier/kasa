@@ -9,6 +9,7 @@ import {
 import Home from './pages/Home';
 import Housing from './pages/Housing';
 import Notfound from './pages/Notfound';
+import About from './pages/About.jsx';
 
 
 const router = createBrowserRouter([
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/housing/:id",
     element: <Housing />,
+  },
+  {
+    path: "/about",
+    element: <About />,
   },
   {
     path: "/404",
