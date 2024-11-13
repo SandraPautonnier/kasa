@@ -9,7 +9,7 @@ import {
 import Home from './pages/Home';
 import Housing from './pages/Housing';
 import Notfound from './pages/Notfound';
-import About from './pages/About.jsx';
+import About from './pages/About/index.jsx';
 
 
 const router = createBrowserRouter([
