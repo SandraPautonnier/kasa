@@ -21,3 +21,17 @@
         }
     }
 }
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    font-size: 16px;
+    color: white;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+  }
+  
+  
+  

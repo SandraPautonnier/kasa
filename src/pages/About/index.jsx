@@ -1,6 +1,4 @@
-import React, { useState } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import React from 'react'
 import aboutlists from '../../assets/aboutList.json';
 import Dropdown from '../../components/Dropdown'
 import Navbar from '../../components/Navbar';

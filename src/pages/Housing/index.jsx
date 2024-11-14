@@ -26,8 +26,8 @@ const Housing = () => {
             <main>
                     <div className='housing-form' >
                         <div className='img-carousel'>
-                            <img className='header-img' src={`${housing.cover}`} alt={`${housing.description}`}/>
-                            <Carousel />
+                            <Carousel pictures={housing.pictures}/>
+                            
                         </div>
                         <div className='form'>
                             <div className='left-form'>
