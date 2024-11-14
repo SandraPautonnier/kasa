@@ -3,11 +3,18 @@
 .rating {
     display: inline-flex;
     align-items: center;
+    gap: 8px;
+    @media (min-width: 1024px) {
+      gap: 12px;
+    }
   }
   
   .star {
-    font-size: 24px;
+    font-size: 18px;
     color: #e3e3e3; /* Couleur pour les étoiles vides */
+    @media (min-width: 1024px) {
+      font-size: 24px;
+    }
   }
   
   .star.filled {
