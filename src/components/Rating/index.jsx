@@ -12,8 +12,8 @@ const Rating = ({ rating }) => {
           key={index}
           className={`star ${index < rating ? 'filled' : 'empty'}`}
         >
-          <FontAwesomeIcon
-        icon={faStar}
+        <FontAwesomeIcon
+          icon={faStar}
         />
         </span>
       ))}

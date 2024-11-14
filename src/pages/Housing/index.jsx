@@ -5,6 +5,7 @@ import housings from '../../assets/logements.json';
 import Footer from '../../components/Footer';
 import Dropdown from '../../components/Dropdown';
 import Rating from '../../components/Rating';
+import Carousel from '../../components/Carousel';
 
 
 const Housing = () => {
@@ -23,31 +24,34 @@ const Housing = () => {
                 <Navbar/>
             </header>
             <main>
-                <div className='housing-form' >
-                    <img className='header-img' src={`${housing.cover}`} alt={`${housing.description}`}/>
-                    <div className='form'>
-                        <div className='left-form'>
-                            <h2>{`${housing.title}`}</h2>
-                            <p>{`${housing.location}`}</p>
-                            <ul className='tags'>
-                                {housing.tags.map((tag, index) => (
-                                    <li className='tag' key={index}>{tag}</li>
-                                ))}
-                            </ul>
+                    <div className='housing-form' >
+                        <div className='img-carousel'>
+                            <img className='header-img' src={`${housing.cover}`} alt={`${housing.description}`}/>
+                            <Carousel />
                         </div>
-                        <div className='host-ratting'>
-                            <Rating rating={`${housing.rating}`}></Rating>
-                            <div className='host-member'>
-                                <p className='member-name'>{`${housing.host.name}`}</p>
-                                <img src={`${housing.host.picture}`} alt={`${housing.host.name}`} />
+                        <div className='form'>
+                            <div className='left-form'>
+                                <h2>{`${housing.title}`}</h2>
+                                <p>{`${housing.location}`}</p>
+                                <ul className='tags'>
+                                    {housing.tags.map((tag, index) => (
+                                        <li className='tag' key={index}>{tag}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                            <div className='host-ratting'>
+                                <Rating rating={`${housing.rating}`}></Rating>
+                                <div className='host-member'>
+                                    <p className='member-name'>{`${housing.host.name}`}</p>
+                                    <img src={`${housing.host.picture}`} alt={`${housing.host.name}`} />
+                                </div>
                             </div>
                         </div>
+                        <div className='drop-down'>
+                            <Dropdown content={housing.description} title={"Description"}/>
+                            <Dropdown content={housing.equipments} title={"Équipements"}/>
+                        </div>
                     </div>
-                    <div className='drop-down'>
-                        <Dropdown content={housing.description} title={"Description"}/>
-                        <Dropdown content={housing.equipments} title={"Équipements"}/>
-                    </div>
-                </div>
             </main>
             <Footer/>
         </div>
