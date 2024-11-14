@@ -26,8 +26,12 @@ button {
 
 .container-dropdown {
     position: relative;
-    margin: auto auto 30px auto;
+    margin-bottom: 20px;
+    width: 100%;
     max-width: 1024px;
+    @media (min-width: 1024px) {
+        margin-bottom: 30px;
+    }
     .click-toggle {
         padding:0px;
         margin: 0;

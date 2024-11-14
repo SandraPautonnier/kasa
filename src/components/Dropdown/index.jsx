@@ -13,7 +13,13 @@ const Dropdown = ({ title, content }) => {
       <div className="click-toggle" onClick={toggle}>
         <h3>{title}</h3>
         <button>
-          <FontAwesomeIcon icon={faChevronDown transition="transform 0.3s ease-in-out", transform: isOpen ? rotation={180} : rotation={0}, display: 'inline-block' }} />
+        <FontAwesomeIcon
+        icon={faChevronUp}
+        style={{
+          transition: 'transform 0.3s ease-in-out',
+          transform: isOpen ? 'rotate(-180deg)' : 'rotate(0deg)',
+        }}
+        />
         </button>
       </div>
       {isOpen && (

@@ -1,7 +1,9 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-.container-about-list {
-  width: 100%;
+@media (min-width: 1024px) {
+  .container-about-list {
+    margin: 30px 9%;
+  }
 }
 
 .container-housings {
@@ -139,8 +141,14 @@ button svg {
 
 .container-dropdown {
   position: relative;
-  margin: auto auto 30px auto;
+  margin-bottom: 20px;
+  width: 100%;
   max-width: 1024px;
+}
+@media (min-width: 1024px) {
+  .container-dropdown {
+    margin-bottom: 30px;
+  }
 }
 .container-dropdown .click-toggle {
   padding: 0px;
@@ -333,7 +341,13 @@ footer {
 footer img {
   width: 145px;
   height: auto;
+  margin-bottom: 10px;
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(39deg) brightness(200%) contrast(101%);
+}
+@media (min-width: 1024px) {
+  footer img {
+    margin-bottom: 20px;
+  }
 }
 
 * {
