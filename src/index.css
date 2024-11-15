@@ -140,6 +140,7 @@ a.link-home {
   font-size: 15px;
   font-weight: 600;
   margin: 0;
+  cursor: pointer;
 }
 @media (min-width: 1024px) {
   .container-dropdown h3 {
@@ -240,7 +241,7 @@ a.link-home {
 
 .carousel-indicators {
   position: absolute;
-  bottom: 10px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -410,7 +411,7 @@ nav ul {
 @media (min-width: 1024px) {
   nav ul {
     text-transform: initial;
-    font-size: 20px;
+    font-size: 17px;
     gap: 3rem;
   }
 }

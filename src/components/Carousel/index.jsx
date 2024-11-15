@@ -1,11 +1,9 @@
-
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import housings from '../../assets/logements.json';
 
-const Carousel = ({ housings, pictures }) => {
+const Carousel = ({ pictures }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const goToPrevious = () => {
@@ -20,12 +18,13 @@ const Carousel = ({ housings, pictures }) => {
         );
     };
 
-    if (pictures.length === 1) {
-        
-        return (
-            <div><img className='header-img' src={`${housing.cover}`} alt="" /></div>
-        )
-    }
+  if (pictures.length === 1) {
+    return (
+        <div>
+          <img className='header-img' src={pictures[0]} alt="" />
+        </div>
+    )
+  }  
     
 
   return (
