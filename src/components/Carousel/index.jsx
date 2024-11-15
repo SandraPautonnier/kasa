@@ -21,7 +21,7 @@ const Carousel = ({ pictures }) => {
   if (pictures.length === 1) {
     return (
         <div>
-          <img className='header-img' src={pictures[0]} alt="" />
+          <img className='only-img' src={pictures[0]} alt="" />
         </div>
     )
   }  
@@ -34,7 +34,13 @@ const Carousel = ({ pictures }) => {
             icon={faChevronLeft}
             />
         </button>
-        <img className='header-img' src={pictures[currentIndex]} alt="" />
+        <div className="carousel-track-container">
+          <div className='carousel-track' style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+            {pictures.map(picture => (
+              <img className="carousel-img" src={picture} alt="" />
+            ))}
+          </div>
+        </div>
         <button onClick={goToNext} className='btn-right'>
             <FontAwesomeIcon
             icon={faChevronRight}

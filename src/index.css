@@ -216,11 +216,48 @@ a.link-home {
   color: #FF6060; /* Couleur pour les étoiles remplies */
 }
 
-.img-carousel {
-  position: relative;
+.only-img {
+  width: 100%;
+  height: 255px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  object-fit: cover;
 }
-.img-carousel .container-carousel button {
+@media (min-width: 1024px) {
+  .only-img {
+    height: 415px;
+  }
+}
+
+.container-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.container-carousel .carousel-track-container {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.container-carousel .carousel-track-container .carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.container-carousel .carousel-track-container .carousel-track .carousel-img {
+  width: 100%;
+  height: 255px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  object-fit: cover;
+}
+@media (min-width: 1024px) {
+  .container-carousel .carousel-track-container .carousel-track .carousel-img {
+    height: 415px;
+  }
+}
+.container-carousel button {
   position: absolute;
+  z-index: 8;
   background: none;
   border: none;
   cursor: pointer;
@@ -230,16 +267,15 @@ a.link-home {
   transform: translateY(-50%);
 }
 @media (min-width: 1024px) {
-  .img-carousel .container-carousel button {
+  .container-carousel button {
     font-size: 50px;
   }
 }
-.img-carousel .container-carousel .btn-right {
+.container-carousel .btn-right {
   left: 100%;
   transform: translate(-100%, -50%);
 }
-
-.carousel-indicators {
+.container-carousel .carousel-indicators {
   position: absolute;
   bottom: 20px;
   left: 50%;
@@ -249,18 +285,6 @@ a.link-home {
   font-size: 16px;
   color: white;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
-}
-
-.header-img {
-  width: 100%;
-  height: 255px;
-  border-radius: 10px;
-  object-fit: cover;
-}
-@media (min-width: 1024px) {
-  .header-img {
-    height: 415px;
-  }
 }
 
 h2 {

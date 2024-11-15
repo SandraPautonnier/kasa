@@ -25,9 +25,7 @@ const Housing = () => {
             </header>
             <main>
                     <div className='housing-form' >
-                        <div className='img-carousel'>
-                            <Carousel pictures={housing.pictures}/>
-                        </div>
+                        <Carousel pictures={housing.pictures}/>
                         <div className='form'>
                             <div className='left-form'>
                                 <h2>{`${housing.title}`}</h2>
