@@ -9,6 +9,8 @@
 .container-housings {
   display: flex;
   flex-direction: column;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   gap: 15px;
   border-radius: 20px;

@@ -1,3 +1,5 @@
+@import "../utils/variables";
+@import "../utils/mixins";
 
 .only-img {
     width: 100%;
@@ -12,12 +14,10 @@
 
 .container-carousel {
     position: relative;
-    width: 100%;
-    overflow: hidden;
+    @include carousel-hidden;
     .carousel-track-container {
-        width: 100%;
+        @include carousel-hidden;
         border-radius: 10px;
-        overflow: hidden;
         .carousel-track {
             display: flex;
             transition: transform 0.5s ease-in-out;

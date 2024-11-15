@@ -1,8 +1,8 @@
 @import "../utils/variables";
+@import "../utils/mixins";
 
 .container-housings {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     justify-content: center;
     gap: 15px;
     border-radius: 20px;

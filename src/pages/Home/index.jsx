@@ -23,7 +23,6 @@ const Home = () => {
                 <img src={`${housing.cover}`} alt={`${housing.description}`} />
                 <p>{housing.title}</p>
                 </Link>
-                
               </div>
             ))
           }

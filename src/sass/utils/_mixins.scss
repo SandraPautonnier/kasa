@@ -1,7 +1,19 @@
 @import "../utils/variables";
+@import "../utils/mixins";
 
 //Width
-@mixin width-card {
-    border-radius: 15px;
 
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin justify-align-center {
+    justify-content: center;
+    align-content: center;
+}
+
+@mixin carousel-hidden {
+    width: 100%;
+    overflow: hidden;
 }
