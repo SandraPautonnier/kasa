@@ -9,8 +9,6 @@
 .container-housings {
   display: flex;
   flex-direction: column;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   gap: 15px;
   border-radius: 20px;
@@ -53,8 +51,8 @@
 
 .header-banner {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-content: center;
   height: 110px;
   border-radius: 10px;
   padding: 0px 100px 0px 0px;
@@ -125,7 +123,7 @@ a.link-home {
   }
 }
 .container-dropdown .click-toggle {
-  padding: 0px;
+  padding: 0;
   margin: 0;
   height: 30px;
 }
@@ -238,8 +236,8 @@ a.link-home {
 }
 .container-carousel .carousel-track-container {
   width: 100%;
-  border-radius: 10px;
   overflow: hidden;
+  border-radius: 10px;
 }
 .container-carousel .carousel-track-container .carousel-track {
   display: flex;
@@ -448,8 +446,8 @@ nav ul .active {
 footer {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-content: center;
   height: 210px;
   background-color: black;
   color: white;
