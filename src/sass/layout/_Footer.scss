@@ -4,6 +4,7 @@
 footer {
     @include flex-column;
     @include justify-align-center;
+    flex-wrap: wrap;
     height: 210px;
     background-color: black;
     color: white;

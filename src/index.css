@@ -448,6 +448,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  flex-wrap: wrap;
   height: 210px;
   background-color: black;
   color: white;
