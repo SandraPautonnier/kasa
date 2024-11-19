@@ -1,3 +1,10 @@
+.about-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .container-about-list {
     @media (min-width: 1024px) {
         margin: 30px 9%;

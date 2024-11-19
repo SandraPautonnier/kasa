@@ -8,20 +8,23 @@ import Background2 from '../../assets/images/background-2.png';
 const About = () => {
 
   return (
-    <div>
+    <div className='about-page'>
+      <div>
         <header>
-            <Navbar/>
-            <div className='header-banner' style={{background: `linear-gradient(to bottom, rgba(0,0,0, 0.5), rgba(0,0,0, 0.5)), url(${Background2}) no-repeat center/cover`}}></div>
-        </header>
-        <main>
-          <div className='container-about-list'>
-            {
-              aboutlists.map(aboutlist =>
-                <Dropdown content={aboutlist.content} title={aboutlist.title}/>
-              )
-            }
-          </div>
-        </main>
+              <Navbar/>
+              <div className='header-banner' style={{background: `linear-gradient(to bottom, rgba(0,0,0, 0.5), rgba(0,0,0, 0.5)), url(${Background2}) no-repeat center/cover`}}></div>
+          </header>
+          <main>
+            <div className='container-about-list'>
+              {
+                aboutlists.map(aboutlist =>
+                  <Dropdown content={aboutlist.content} title={aboutlist.title}/>
+                )
+              }
+            </div>
+          </main>
+      </div>
+        
         <Footer />
     </div>
   )

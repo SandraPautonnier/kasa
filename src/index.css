@@ -1,5 +1,12 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+.about-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 @media (min-width: 1024px) {
   .container-about-list {
     margin: 30px 9%;
@@ -449,9 +456,9 @@ footer {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  height: 210px;
   background-color: black;
   color: white;
+  padding: 100px 30px;
 }
 footer img {
   width: 145px;

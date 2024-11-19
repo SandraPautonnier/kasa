@@ -21,7 +21,7 @@ const Carousel = ({ pictures }) => {
   if (pictures.length === 1) {
     return (
         <div>
-          <img className='only-img' src={pictures[0]} alt="" />
+          <img className='only-img' src={pictures[0]} alt="image du logement" />
         </div>
     )
   }  
@@ -37,7 +37,7 @@ const Carousel = ({ pictures }) => {
         <div className="carousel-track-container">
           <div className='carousel-track' style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
             {pictures.map(picture => (
-              <img className="carousel-img" src={picture} alt="" />
+              <img className="carousel-img" src={picture} alt="image du logement" />
             ))}
           </div>
         </div>

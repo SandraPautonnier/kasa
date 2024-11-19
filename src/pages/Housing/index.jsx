@@ -19,7 +19,7 @@ const Housing = () => {
     }
 
     return (
-        <div>
+        <div className='housing-page'>
             <header>
                 <Navbar/>
             </header>
