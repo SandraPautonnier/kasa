@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 
 const Dropdown = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const contentRef = useRef(null);
   const toggle = () => setIsOpen(!isOpen);
 
   return (
@@ -22,19 +22,25 @@ const Dropdown = ({ title, content }) => {
         />
         </button>
       </div>
-      {isOpen && (
-        <div className="content-dropdown">
-          {typeof content === "string" ? (
-            <p className="content-drop">{content}</p>
-          ) : content instanceof Array ? (
-            <ul className="content-drop">
-              {content.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          ) : null}
-        </div>
-      )}
+      <div
+        className={`content-dropdown ${isOpen ? "open" : "closed"}`}
+        ref={contentRef}
+        style={{
+          height: isOpen ? `${contentRef.current?.scrollHeight}px` : "0px",
+          overflow: "hidden",
+          transition: "height 0.2s ease-in-out",
+        }}
+      >
+        {typeof content === "string" ? (
+          <p className="content-drop">{content}</p>
+        ) : content instanceof Array ? (
+          <ul className="content-drop">
+            {content.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        ) : null}
+      </div>
     </div>
   );
 };

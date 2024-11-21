@@ -189,12 +189,18 @@ a.link-home {
   margin: 0;
   font-size: 17px;
   line-height: 25px;
-  padding: 15px;
+  padding: 0;
   border-radius: 10px;
+}
+.container-dropdown .content-dropdown.open {
+  height: auto; /* Hauteur dynamique lorsque l'état est ouvert */
+}
+.container-dropdown .content-dropdown.closed {
+  height: 0; /* Hauteur réduite à 0 lorsque l'état est fermé */
 }
 .container-dropdown .content-dropdown .content-drop {
   margin: 0;
-  padding: 0;
+  padding: 15px;
   font-weight: 300;
 }
 
