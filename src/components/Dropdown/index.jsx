@@ -16,7 +16,7 @@ const Dropdown = ({ title, content }) => {
         <FontAwesomeIcon
         icon={faChevronUp}
         style={{
-          transition: 'transform 0.3s ease-in-out',
+          transition: 'transform 0.2s ease-in-out',
           transform: isOpen ? 'rotate(-180deg)' : 'rotate(0deg)',
         }}
         />
