@@ -210,7 +210,7 @@ a.link-home {
 }
 
 .star {
-  font-size: 18px;
+  font-size: 17px;
   color: #e3e3e3; /* Couleur pour les étoiles vides */
 }
 @media (min-width: 1024px) {
@@ -283,15 +283,19 @@ a.link-home {
   transform: translate(-100%, -50%);
 }
 .container-carousel .carousel-indicators {
+  display: none;
   position: absolute;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
   font-size: 16px;
   color: white;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+}
+@media (min-width: 1024px) {
+  .container-carousel .carousel-indicators {
+    display: flex;
+  }
 }
 
 h2 {
@@ -339,7 +343,7 @@ p {
 .host-ratting {
   display: inline-flex;
   justify-content: space-between;
-  margin: 10px 0px;
+  margin: 10px 0px 5px 0px;
   gap: 10px;
 }
 @media (min-width: 1024px) {
@@ -375,7 +379,7 @@ p {
 }
 .host-ratting .host-member p.member-name {
   color: #FF6060;
-  font-size: 16px;
+  font-size: 15px;
   text-align: center;
   /*white-space: pre-line;*/
 }

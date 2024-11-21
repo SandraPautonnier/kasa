@@ -1,5 +1,5 @@
 import { Navigate, useParams } from 'react-router-dom';
-import React, { useState } from 'react';
+import React from 'react';
 import Navbar from '../../components/Navbar';
 import housings from '../../assets/logements.json';
 import Footer from '../../components/Footer';

@@ -46,7 +46,7 @@ p {
 .host-ratting {
     display: inline-flex;
     justify-content: space-between;
-    margin: 10px 0px;
+    margin: 10px 0px 5px 0px;
     gap: 10px;
     @media (min-width: 1024px) {
         display: flex;
@@ -61,6 +61,7 @@ p {
         @media (min-width: 1024px) {
             gap: 20px;
         }
+        
         img {
             width: 32px;
             height: 32px;
@@ -73,7 +74,7 @@ p {
         }
         p.member-name {
             color: $main-color;
-            font-size: 16px;
+            font-size: 15px;
             text-align: center;
             /*white-space: pre-line;*/
             @media (min-width: 1024px) {

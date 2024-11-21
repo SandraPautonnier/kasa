@@ -12,7 +12,7 @@ const About = () => {
       <div>
         <header>
               <Navbar/>
-              <div className='header-banner' style={{background: `linear-gradient(to bottom, rgba(0,0,0, 0.5), rgba(0,0,0, 0.5)), url(${Background2}) no-repeat center/cover`}}></div>
+              <div className='header-banner' style={{background: `linear-gradient(to bottom, rgba(0,0,0, 0.3), rgba(0,0,0, 0.3)), url(${Background2}) no-repeat center/cover`}}></div>
           </header>
           <main>
             <div className='container-about-list'>
