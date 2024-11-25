@@ -36,8 +36,8 @@ const Carousel = ({ pictures }) => {
         </button>
         <div className="carousel-track-container">
           <div className='carousel-track' style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-            {pictures.map(picture => (
-              <img className="carousel-img" src={picture} alt="image du logement" />
+            {pictures.map((picture, index) => (
+              <img key={index} className="carousel-img" src={picture} alt="image du logement" />
             ))}
           </div>
         </div>
