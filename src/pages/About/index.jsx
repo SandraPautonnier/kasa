@@ -18,7 +18,10 @@ const About = () => {
             <div className='container-about-list'>
               {
                 aboutlists.map(aboutlist =>
-                  <Dropdown content={aboutlist.content} title={aboutlist.title}/>
+                  <div key={aboutlist.title}>
+                    <Dropdown content={aboutlist.content} title={aboutlist.title}/>
+                  </div>
+                  
                 )
               }
             </div>
