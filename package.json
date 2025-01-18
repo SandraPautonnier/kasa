@@ -32,6 +32,7 @@
       "react-app/jest"
     ]
   },
+  "homepage": "https://sandrapautonnier.github.io/kasa",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -46,8 +47,6 @@
   },
   "devDependencies": {
     "gh-pages": "^6.3.0"
-  },
-  {
-    "homepage": "https://sandrapautonnier.github.io/kasa"
   }
+  
 }
