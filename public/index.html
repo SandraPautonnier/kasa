@@ -25,6 +25,12 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <script>
+      // Redirige vers l'entrée React en cas d'erreur 404
+      if (window.location.pathname !== "/" && window.location.pathname.indexOf("404") !== -1) {
+        window.location.href = "/";
+      }
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
